@@ -79,6 +79,7 @@ class MainHook : IYukiHookXposedInit {
 
     override fun onInit()  = configs{
         super.onInit()
+        debugLog { tag = "Inspector" }
         isDebug = true
         isEnableHookSharedPreferences = true
     }
