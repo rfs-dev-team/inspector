@@ -1,0 +1,31 @@
+name: telegram notify
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: send telegram message on push
+        uses: rfs-dev-team/telegram-action@master
+        with:
+          to: "-1002154095232"
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+            
+            Repository: ${{ github.repository }}
+            
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+      - name: send telegram message on push to log
+        uses: rfs-dev-team/telegram-action@master
+        with:
+          to: "-1002169374717"
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          message: |
+            ${{ github.actor }} commited to repo `${{ github.repository }}`
+            *${{ github.event.commits[0].message }}*
+            
+            Changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
