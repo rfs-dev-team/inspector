@@ -23,7 +23,7 @@ import java.lang.reflect.Modifier
 
 object UserHook: YukiBaseHooker() {
 
-    const val TAG = "UserHook"
+    const val TAG = "INSPECT_UserHook"
     private val gson: Gson = GsonBuilder().disableHtmlEscaping().create()
     private var sPrefs: XSharedPreferences? = null
 

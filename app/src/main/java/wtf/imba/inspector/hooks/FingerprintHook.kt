@@ -13,7 +13,7 @@ import wtf.imba.inspector.hooks.entity.FingerprintList
 
 object FingerprintHook : YukiBaseHooker() {
 
-    private const val TAG = "FingerprintHook"
+    private const val TAG = "INSPECT_FingerprintHook"
     private var sPrefs: XSharedPreferences? = null
     private val gson = GsonBuilder().disableHtmlEscaping().create()
 

@@ -23,7 +23,7 @@ import java.io.File
 
 object SQLiteHook : YukiBaseHooker() {
 
-    const val TAG = "SQLiteHook"
+    const val TAG = "INSPECT_SQLiteHook"
     override fun onHook() {
         databaseHook()
     }

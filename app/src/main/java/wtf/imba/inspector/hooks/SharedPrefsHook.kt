@@ -23,7 +23,7 @@ import java.nio.charset.Charset
 
 object SharedPrefsHook: YukiBaseHooker() {
 
-     const val TAG = "SharedPrefsHook"
+     const val TAG = "INSPECT_SharedPrefsHook"
     private var sPrefs: XSharedPreferences? = null
     var putFileName = ""
     var sb: StringBuffer? = null

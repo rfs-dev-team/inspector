@@ -9,7 +9,7 @@ import de.robv.android.xposed.XposedBridge
 
 object ClipboardHook: YukiBaseHooker() {
 
-    const val TAG = "ClipboardHook"
+    const val TAG = "INSPECT_ClipboardHook"
 
     override fun onHook() {
         ClipboardManager::class.java.hook {

@@ -8,7 +8,7 @@ import com.highcapable.yukihookapi.hook.type.android.BundleClass
 
 object UIHook: YukiBaseHooker() {
 
-    private const val TAG = "UIHook"
+    private const val TAG = "INSPECT_UIHook"
     override fun onHook() {
         Activity::class.java.hook {
             injectMember {

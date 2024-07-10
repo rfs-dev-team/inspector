@@ -17,7 +17,7 @@ import java.io.ObjectOutputStream
 
 object SerializationHook : YukiBaseHooker() {
 
-    const val TAG = "SerializationHook"
+    const val TAG = "INSPECT_SerializationHook"
     var f = ""
 
     override fun onHook() {

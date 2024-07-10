@@ -15,7 +15,7 @@ import kotlin.Int
 
 object ProcessHook: YukiBaseHooker() {
 
-    private const val TAG = "ProcessHook"
+    private const val TAG = "INSPECT_ProcessHook"
     override fun onHook() {
         try {
             XposedHelpers.findAndHookMethod("android.os.Process", appClassLoader, "start", StringClass, StringClass, IntType, IntType, IntArrayType, IntType,

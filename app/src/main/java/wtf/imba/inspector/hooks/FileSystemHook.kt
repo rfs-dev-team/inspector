@@ -15,7 +15,7 @@ import java.net.URI
 
 object FileSystemHook : YukiBaseHooker() {
 
-    const val TAG = "FileSystemHook"
+    const val TAG = "INSPECT_FileSystemHook"
     override fun onHook() {
         ContextWrapper::class.java.hook {
             injectMember {

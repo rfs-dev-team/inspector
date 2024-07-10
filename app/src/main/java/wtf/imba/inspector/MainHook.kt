@@ -23,7 +23,7 @@ import java.io.File
 @InjectYukiHookWithXposed
 class MainHook : IYukiHookXposedInit {
 
-    private val TAG = "MainHook"
+    private val TAG = "INSPECT_MainHook"
     override fun onHook() =encase {
         loadZygote { initZygote() }
 
